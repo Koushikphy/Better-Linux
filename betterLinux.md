@@ -27,7 +27,7 @@ Now source the `~/.bashrc` and it will replace the Ctrl+R, bash reverse with `fz
 
 ---
 ## 5. `bat`: replacement for `cat`: 
-Download it from here://github.com/sharkdp/bat
+Download it from https://github.com/sharkdp/bat
 
 ---
 ## 6. Terminal file managers:

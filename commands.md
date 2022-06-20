@@ -101,3 +101,19 @@ fd -e txt -X du -ch    # files with `txt` extension
 ```bash
 fd -e txt -j 1 -x xz # -j 1 wll launch one instance of `xz`
 ```
+
+#### Mount remote with `sshfs`
+```bash
+sshfs user@ip:remote_directory local_directory
+```
+
+
+#### Find multiple patterns with `fd`
+```bash
+fd '(pattern1|pattern2)'
+```
+
+### Find exact matches with `fd`
+```bash
+fd '^pattern$'
+```
