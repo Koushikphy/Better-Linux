@@ -54,7 +54,14 @@ tail -f outputfile | xargs -IL date +"%I:%M:%S %p"
 
 #### Quickly benchmark file I/O speed
 ```
-dd if=/dev/zero of=/tmp/output conv=fdatasync bs=384k count=1k; rm -f /tmp/output
+# clear cache
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+# write speed
+dd if=/dev/zero of=./output conv=fdatasync bs=384k count=1k
+# read speed
+dd if=./output of=/dev/null bs=384k count=1k
+# clear
+rm output
 ```
 
 #### Check location of some running command
