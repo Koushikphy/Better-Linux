@@ -5,39 +5,39 @@
 du -shx
 ```
 
-1. size of folders in current directory
+2. size of folders in current directory
 ```bash
 du -d1 -h
 du -d1 -h | sort -h   # sort according to size
 ```
 
-1. list all files with size greater than 1GB (using [fd](https://github.com/Koushikphy/Better-Linux/blob/main/betterLinux.md#1-fd-replacement-for-find))
+3. list all files with size greater than 1GB (using [fd](https://github.com/Koushikphy/Better-Linux/blob/main/betterLinux.md#1-fd-replacement-for-find))
 ```bash
 fd -S +1G
 ```
 
-1. total size of all files named `data.dat`
+4. total size of all files named `data.dat`
 ```bash
 fd data.dat -X du -ch
 fd -e txt -X du -ch    # files with `txt` extension
 ```
 
-1. compress all `.txt` files with `xz`
+5. compress all `.txt` files with `xz`
 ```bash
 fd -e txt -j 1 -x xz # -j 1 wll launch one instance of `xz`
 ```
 
-1. Find multiple patterns with `fd`
+6. Find multiple patterns with `fd`
 ```bash
 fd '(pattern1|pattern2)'
 ```
 
-1. Find exact matches with `fd`
+7. Find exact matches with `fd`
 ```bash
 fd '^pattern$'
 ```
 
-1. tree with file size
+8. tree with file size
 ```
 tree -h -d 1 --du /path/to/dir
 ```
@@ -88,12 +88,12 @@ sudo date -s "$(wget -qSO- --max-redirect=0 google.in 2>&1 | grep Date: | cut -d
 ```
 
 
-1. Check diskIO of processes
+2. Check diskIO of processes
 ```
 sudo iotop
 ```
 
-1. use function with `xargs`
+3. use function with `xargs`
 ```
 moveRun() {
   cwd=$(pwd)
@@ -106,13 +106,13 @@ export -f moveRun
 ls -d */ | xargs -n1 bash -c 'moveRun "$@"' _
 ```
 
-1. tail with timestamp
+4. tail with timestamp
 ```
 tail -f outputfile | xargs -IL date +"%I:%M:%S %p"
 ```
 
 
-1. Quickly benchmark file I/O speed
+5. Quickly benchmark file I/O speed
 ```
 # clear cache
 echo 3 | sudo tee /proc/sys/vm/drop_caches
@@ -124,12 +124,12 @@ dd if=./output of=/dev/null bs=384k count=1k
 rm output
 ```
 
-1. Check location of some running command
+6. Check location of some running command
 ```
 ls -l /proc/<proc_id>/exe
 ```
 
-1. Mount remote with `sshfs`
+7. Mount remote with `sshfs`
 ```bash
 sshfs user@ip:remote_directory local_directory
 ```
