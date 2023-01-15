@@ -60,6 +60,11 @@ To decompress the file into the folder again replace the create (`-c`) with extr
 tar -zxvf archive.tar.gz
 ```  
 
+To list the contents of a compressed file use:
+```bash
+tar -xf file.tar.gz
+```
+
 
 ### Using `zip`:  
 ```bash
