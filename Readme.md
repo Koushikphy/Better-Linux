@@ -1,23 +1,23 @@
 - [Useful commands](#useful-commands)
   - [File/folder listing](#filefolder-listing)
   - [File copy/transfer](#file-copytransfer)
-  - [File operations:](#file-operations)
+  - [File operations](#file-operations)
   - [miscellaneous](#miscellaneous)
 - [File \& Folder compression](#file--folder-compression)
-  - [`gzip`:](#gzip)
-  - [`xz`:](#xz)
-  - [`tar`:](#tar)
-  - [`zip`:](#zip)
+  - [`gzip`](#gzip)
+  - [`xz`](#xz)
+  - [`tar`](#tar)
+  - [`zip`](#zip)
 - [Process Handling](#process-handling)
 - [Linux utilities you should use instead](#linux-utilities-you-should-use-instead)
   - [`fd`: replacement for `find`](#fd-replacement-for-find)
   - [`exa`: replacement for `ls`](#exa-replacement-for-ls)
   - [`gdu`: replacement for `du`](#gdu-replacement-for-du)
   - [`fzz`: replacement for `Ctrl+R`(reverse-i-search)](#fzz-replacement-for-ctrlrreverse-i-search)
-  - [`bat`: replacement for `cat`:](#bat-replacement-for-cat)
-  - [Terminal file managers:](#terminal-file-managers)
-- [Useful bash variables:](#useful-bash-variables)
-- [Things to do after installing ubuntu.](#things-to-do-after-installing-ubuntu)
+  - [`bat`: replacement for `cat`](#bat-replacement-for-cat)
+  - [Terminal file managers](#terminal-file-managers)
+- [Useful bash variables](#useful-bash-variables)
+- [Things to do after installing ubuntu](#things-to-do-after-installing-ubuntu)
 
 
 ## Useful commands
@@ -87,7 +87,7 @@ fd <search_pattern> | rsync -avm  --progress --stats --files-from=- . $dst
 ```
 
 
-### File operations:
+### File operations
 1. Replace text in file without opening it
 ```
 sed -i "s/string/replace/g" file
@@ -160,7 +160,7 @@ sshfs user@ip:remote_directory local_directory
 
 
 ## File & Folder compression
-### `gzip`: 
+### `gzip` 
 
 ```bash
 gzip -kv -6 <filename>
@@ -182,8 +182,8 @@ For parallel gzip use https://zlib.net/pigz/
 
 
 
----
-### `xz`:  
+
+### `xz`
 `xz`(`lzma` compression) is better alternative to `gzip` use it with 
 ```bash
 xz -k -6 -T 3 --verbose <file>
@@ -202,8 +202,8 @@ Useful utilities:
 * Parallel gzip [pigz](https://zlib.net/pigz/)
 * Long range zip [lrzip](https://github.com/ckolivas/lrzip)
 
----
-### `tar`:   
+
+### `tar`   
 `tar` by itself only archive multiple files or folder into one single file and doesn't compress anything. Then other compression utilities are used to compress the file. Gnu `tar` can handle this whole process on its own. To compress the `sample-folder` into `archive.tar.gz`
 ```bash
 tar -zcvf archive.tar.gz sample-folder
@@ -226,7 +226,7 @@ tar -xf file.tar.gz
 ```
 
 
-### `zip`:  
+### `zip`  
 ```bash
 zip output.zip [filename] [-r folder_name]
 ```
@@ -274,17 +274,17 @@ Install with `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && 
 Now source the `~/.bashrc` and it will replace the Ctrl+R, bash reverse with `fzf`
 
 ---
-### `bat`: replacement for `cat`: 
+### `bat`: replacement for `cat` 
 Download it from https://github.com/sharkdp/bat
 
 ---
-### Terminal file managers:
+### Terminal file managers
 1. lf: https://github.com/gokcehan/lf
 2. ranger: https://github.com/ranger/ranger
 3. nnn: https://github.com/jarun/nnn
 
 
-## Useful bash variables:
+## Useful bash variables
 
 - `$1`, `$2`, `$3`, ... are the [positional parameters][1].
 - `"$@"` is an array-like construct of all positional parameters, `{$1, $2, $3 ...}`.
@@ -310,4 +310,5 @@ Reference : [StackOverflow][5]
   [5]: https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
 
 
-## Things to do after installing ubuntu.
+## Things to do after installing ubuntu
+- [Things to do after installing ubuntu](../afterInstallUbuntu.md)
