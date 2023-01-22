@@ -1,4 +1,4 @@
-# Scripts to run after installing ubuntu.
+# Things to do after installing ubuntu.
 
 
 
