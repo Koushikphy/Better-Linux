@@ -240,13 +240,13 @@ unzip file.zip [-d destination_folder]
 | Command    |  Description|
 | ----------- | ----------- 
 |    `Ctrl+C`     | Kill the current forground processs. (Send SIGINT signale to the process) |
-|    `Ctrl+z`     | Suspend the current forground processs. (Send SIGSTOP signale to the process) | 
+|    `Ctrl+Z`     | Suspend the current forground processs. (Send SIGSTOP signale to the process) | 
 |    `kill <pid>`     | Send signall to a process. Default is SIGTERM. <br> Use `kill -l` to check the full list of available signal | 
 |    `pkill <name>`     | Kill all processes with name "name" | 
 |    `fg`    | Move jobs to foreground |
 |    `bg`    | Move jobs to background |
 |    `jobs -l`    | List all background jobs for the current shell. |
-|    `pgrep -la <name>` <br> `top -bc -n1 | grep <name>`   | List all jobs with name "name" |  
+|    `pgrep -la <name>` <br> `top -bc -n1 \| grep <name>`   | List all jobs with name "name" |  
 
 
 
@@ -311,4 +311,4 @@ Reference : [StackOverflow][5]
 
 
 ## Things to do after installing ubuntu
-- [Things to do after installing ubuntu](../afterInstallUbuntu.md)
+- [Things to do after installing ubuntu](afterInstallUbuntu.md)
