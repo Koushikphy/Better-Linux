@@ -34,7 +34,7 @@ du -d1 -h
 du -d1 -h | sort -h   # sort according to size
 ```
 
-3. list all files with size greater than 1GB (using [fd](https://github.com/Koushikphy/Better-Linux/blob/main/betterLinux.md#1-fd-replacement-for-find))
+3. list all files with size greater than 1GB (using [fd](https://github.com/Koushikphy/Better-Linux#fd-replacement-for-find))
 ```bash
 fd -S +1G
 ```
@@ -264,7 +264,7 @@ Preferred usage `exa -l -T -L <depth> --no-user`
 
 ---
 ### `gdu`: replacement for `du`
-Install with `cargo install du-dus` or download the latest release from https://github.com/dundee/gdu  
+Install `gdu` from https://github.com/dundee/gdu#installation.
 Preferred usage `gdu`
 
 
