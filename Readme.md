@@ -158,6 +158,10 @@ ls -l /proc/<proc_id>/exe
 sshfs user@ip:remote_directory local_directory
 ```
 
+8. Wait for a process to finish with PID
+```bash
+tail --pid=$PID -f /dev/null
+```
 
 
 ## File & Folder compression
