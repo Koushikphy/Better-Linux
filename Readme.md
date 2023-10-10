@@ -182,8 +182,8 @@ Decompress the same with
 gzip -d file.gz
 ```
 
-Similar to `gzip` another compression utility `bzip2`. It has similar flags and usage like `gzip`  
-For parallel gzip use https://zlib.net/pigz/  
+- Similar to `gzip` another compression utility `bzip2`. It has similar flags and usage like `gzip`  
+- For parallel gzip use https://zlib.net/pigz/  
 
 
 
@@ -195,17 +195,17 @@ xz -k -6 -T 3 --verbose <file>
 ```
 `xz` supports parallel processing, use it with `-T 3` with 3 being number of processor.  
 
-For best possible compression use https://github.com/ckolivas/lrzip  
+- For best possible compression of large files use [lrzip](https://github.com/ckolivas/lrzip)
 
-[A Quick Benchmark: Gzip vs. Bzip2 vs. LZMA](https://tukaani.org/lzma/benchmarks.html)  
+- [A Quick Benchmark: Gzip vs. Bzip2 vs. LZMA](https://tukaani.org/lzma/benchmarks.html)  
 
-Which one to use?  
-* If you want to quickly compress the file and on a limited resource use `gzip`. 
-* If you want the best compression/ smallest file size and have enough RAM and processor available use `xz`  
+- Which one to use?  
+  * If you want to quickly compress the file and on a limited resource use `gzip`. 
+  * If you want the best compression/ smallest file size and have enough RAM and processor available use `xz`  
 
-Useful utilities:  
-* Parallel gzip [pigz](https://zlib.net/pigz/)
-* Long range zip [lrzip](https://github.com/ckolivas/lrzip)
+<!--  - Useful utilities:  
+ * Parallel gzip [pigz](https://zlib.net/pigz/)
+  * Long range zip [lrzip](https://github.com/ckolivas/lrzip) -->
 
 
 ### `tar`   
@@ -220,7 +220,7 @@ tar -zcvf archive.tar.gz sample-folder
 `-j` : Use `bzip2` utility  
 `-J` : Use `xz` utility  
 `-I` : Specify compression utility, `-I 'gzip -6'` is same as `-z`  
-To decompress the file into the folder again replace the create (`-c`) with extract (`-x`) flag use
+To decompress the file into the folder again replace the create (`-c`) with extract (`-x`) flag
 ```bash
 tar -zxvf archive.tar.gz
 ```  
