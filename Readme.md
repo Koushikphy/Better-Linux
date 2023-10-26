@@ -222,12 +222,12 @@ tar -zcvf archive.tar.gz sample-folder
 `-I` : Specify compression utility, `-I 'gzip -6'` is same as `-z`  
 To decompress the file into the folder again replace the create (`-c`) with extract (`-x`) flag
 ```bash
-tar -zxvf archive.tar.gz
+tar -xvf archive.tar.gz
 ```  
 
 To list the contents of a compressed file use:
 ```bash
-tar -xf file.tar.gz
+tar -tf file.tar.gz
 ```
 
 
